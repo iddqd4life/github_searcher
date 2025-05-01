@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Searcher</title>
-<script defer src="main.07835e64499abb8aaf90.js"></script></head>
+<script defer src="main.f7d2592b8b387881d89b.js"></script><link href="styles.f63e73550bd92bf4c49a.css" rel="stylesheet"></head>
 <body>
-    <h1>GitHub repository searcher</h1>
+    <div class="content">
+        <div class="container">
+            <header class="header">
+                <h1 class="header__title">
+                    GitHub Searcher
+                </h1>
+            </header>
+            <main class="main">
+                <section class="main__search-wrapper">
+                    <input type="text" class="main__search-input" placeholder="Search...">
+                    <div class="main__autocomplete-wrapper">
+                        <ul class="main__autocomplete-list"></ul>                   
+                    </div>
+                </section>
+                <section class="main__repos-wrapper">
+                    <ul class="main__repos-list"></ul>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <template id="repositoryItem">
+        <li class="main__repos-item">
+            <div class="repository">
+                <div class="repository__info">
+                    <h2 class="repository__name"><a href="" class="repository__name--link" target="_blank"></a></h2>
+                    <p class="repository__owner">by <span class="repository__owner--name"></span></p>
+                    <p class="repository__stars">★ <span class="repository__stars--number"></span></p>
+                </div>
+                
+                <button class="repository__remove-button">Remove</button>
+            </div>
+        </li>
+    </template>
 </body>
 </html>

@@ -1,0 +1,10 @@
+@use 'colors';
+@use 'fonts';
+
+.header {
+    &__title {
+        @include fonts.Montserrat(32px, 900);
+        text-align: center;
+        color: colors.$cream;
+    }
+}

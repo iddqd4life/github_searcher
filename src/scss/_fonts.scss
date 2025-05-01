@@ -1,0 +1,23 @@
+@font-face {
+    font-family: CalSans;
+    src: url('../asssets/fonts/CalSans-Regular.ttf') format('truetype');
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('../asssets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-display: swap;
+}
+
+@mixin CalSans($font-size: 16px) {
+    font-family: CalSans, sans-serif;
+    font-size: $font-size;
+}
+
+@mixin Montserrat($font-size: 16px, $font-weight: normal) {
+    font-family: Montserrat, sans-serif;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}

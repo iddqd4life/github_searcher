@@ -1,0 +1,10 @@
+@use 'colors';
+
+.content {
+    background-color: colors.$black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 32px;
+}

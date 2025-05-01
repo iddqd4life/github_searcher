@@ -1,0 +1,68 @@
+@use 'colors';
+@use 'fonts';
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__search-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__search-input {
+        @include fonts.Montserrat(16px, 600);
+        padding: 16px;
+        border-radius: 25px;
+        outline: colors.$red;
+        border: 2px solid colors.$red;
+        background-color: colors.$cream;
+        color: colors.$black;
+    }
+
+    &__autocomplete-wrapper {
+        @include fonts.Montserrat();
+        background-color: colors.$cream;
+        border: 2px solid colors.$red;
+        border-radius: 25px;
+        display: none;
+
+        &--active {
+            display: block;
+        }
+    }
+
+    &__autocomplete-list {
+        list-style-type: none;
+        padding: 18px 0;
+    }
+
+    &__autocomplete-item {
+        padding: 8px 16px;
+        cursor: pointer;
+        color: colors.$black;
+        transition: all 0.1s ease-in-out;
+        
+
+        &:hover {
+            background-color: colors.$red;
+            color: colors.$cream;
+        }
+    }
+
+    &__repos-list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__repos-item {
+        border-radius: 25px;
+        border: 2px solid colors.$red;
+        padding: 16px 18px;
+        background-color: colors.$cream;
+    }
+}

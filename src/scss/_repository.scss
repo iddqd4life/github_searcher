@@ -1,0 +1,49 @@
+@use 'fonts';
+@use 'colors';
+
+.repository {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @include fonts.Montserrat(14px);
+    
+    &__name {
+        @include fonts.Montserrat(24px, 700);
+        color: colors.$black;
+
+        &--link {
+            color: colors.$red;
+        }
+    }
+
+    &__stars {
+        color: colors.$red;
+    }
+
+    &__remove-button {
+        padding: 8px 16px;
+        border-radius: 10px;
+        background-color: colors.$red;
+        border: 2px solid transparent;
+        @include fonts.Montserrat(16px, 500);
+        cursor: pointer;
+        color: colors.$cream;
+        transition:
+            border 0.2s ease-in-out,
+            background-color 0.2s ease-in-out,
+            color 0.2s ease-in-out;
+
+        &:hover {
+            border: 2px solid colors.$red;
+            background-color: transparent;
+            color: colors.$black;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+}

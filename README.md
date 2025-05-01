@@ -1,3 +1,3 @@
-#GitHub Searcher
+# GitHub Searcher
 
 Simple searcher github repositories
